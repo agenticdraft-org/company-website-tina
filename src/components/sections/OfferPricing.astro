@@ -1,0 +1,65 @@
+---
+import { tinaField } from '@tinacms/astro/tina-field';
+import type { CmsOfferPlan, CmsOfferPricing } from '../../lib/data';
+import { uiStrings } from '../../lib/i18n';
+
+interface Props {
+	pricing?: CmsOfferPricing | null;
+	locale?: string;
+}
+
+const { pricing, locale } = Astro.props;
+const ui = uiStrings(locale);
+const plans = (pricing?.plans ?? []).filter((plan): plan is CmsOfferPlan => plan !== null);
+---
+
+{
+	pricing && (
+		<section class="offer-pricing section" id="prices" aria-labelledby="prices-title">
+			<div class="section-heading reveal">
+				<p class="eyebrow" data-tina-field={tinaField(pricing, 'eyebrow')}>
+					<span /> {pricing.eyebrow}
+				</p>
+				<h2 id="prices-title">
+					<span data-tina-field={tinaField(pricing, 'heading')}>{pricing.heading}</span>
+					{pricing.headingLine2 && (
+						<>
+							<br />
+							<em data-tina-field={tinaField(pricing, 'headingLine2')}>{pricing.headingLine2}</em>
+						</>
+					)}
+				</h2>
+				<p class="preserve-lines" data-tina-field={tinaField(pricing, 'intro')}>{pricing.intro}</p>
+			</div>
+			<ul class="plans" aria-label={ui.priceListAria}>
+				{plans.map((plan) => {
+					const includes = (plan.includes ?? []).filter((item): item is string => Boolean(item));
+					return (
+						<li class:list={['plan', 'reveal', { 'is-key': plan.highlight }]}>
+							<h3 data-tina-field={tinaField(plan, 'name')}>{plan.name}</h3>
+							<p class="plan-price">
+								<strong data-tina-field={tinaField(plan, 'price')}>{plan.price}</strong>
+								{plan.unit && <span data-tina-field={tinaField(plan, 'unit')}>{plan.unit}</span>}
+							</p>
+							<p class="plan-body preserve-lines" data-tina-field={tinaField(plan, 'body')}>
+								{plan.body}
+							</p>
+							{includes.length > 0 && (
+								<ul class="plan-includes">
+									{includes.map((item, index) => (
+										<li data-tina-field={tinaField(plan, 'includes', index)}>{item}</li>
+									))}
+								</ul>
+							)}
+						</li>
+					);
+				})}
+			</ul>
+			{pricing.terms && (
+				<p class="plan-terms preserve-lines reveal" data-tina-field={tinaField(pricing, 'terms')}>
+					{pricing.terms}
+				</p>
+			)}
+		</section>
+	)
+}

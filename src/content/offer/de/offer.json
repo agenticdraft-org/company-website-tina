@@ -1,0 +1,171 @@
+{
+  "seoTitle": "Unser Angebot — AgenticDraft",
+  "seoDescription": "Was wir liefern, womit wir es bauen und was es kostet. Agentische Delivery auf Adobe Experience Manager und Edge Delivery Services, mit Preisen vor dem ersten Gespräch.",
+  "hero": {
+    "eyebrow": "Unser Angebot",
+    "heading": "Was wir tun, womit, und was es kostet.",
+    "headingAccent": "Auf einer Seite, vor dem ersten Gespräch.",
+    "lede": "Die meisten Angebote nennen den Preis erst im dritten Termin. Unserer steht weiter unten auf dieser Seite.\nZwei Wege, mit uns zu arbeiten: Wir liefern die Arbeit, oder wir richten den Workflow in Ihrem Team ein und gehen wieder. Beide fangen klein an — ein Workflow, ein Repository, ein Ergebnis, das Sie mit Ihrem heutigen Aufwand vergleichen können."
+  },
+  "services": {
+    "eyebrow": "Was wir anbieten",
+    "heading": "Ein Schwerpunkt.",
+    "headingLine2": "Vier Arten, ihn zu nutzen.",
+    "intro": "Agentische Delivery auf Adobe Experience Manager und Edge Delivery Services. Dort haben wir die letzten sieben Jahre verbracht, und dort können wir Verantwortung für ein Ergebnis übernehmen, statt Stunden zu liefern.",
+    "outcomeLabel": "Sie erhalten",
+    "items": [
+      {
+        "label": "Wir bauen es",
+        "title": "Delivery",
+        "body": "Geben Sie uns einen Arbeitsstrang — eine Reihe von Komponenten, eine neue Edge-Delivery-Site, ein Backlog, für das niemand Zeit hat — und wir führen ihn durch unseren Workflow, vom Ticket bis zum prüfbereiten Pull Request. Review und Merge bleiben bei Ihren Entwicklern.",
+        "outcome": "Geprüfte Pull Requests, die Nachweise hinter jedem einzelnen und Anleitungen für Redakteure."
+      },
+      {
+        "label": "Wir richten es ein und gehen",
+        "title": "Enablement",
+        "body": "Wir richten den agentischen Workflow in Ihrem Team ein — Ihr Repository, Ihr Tracker, Ihre Konventionen —, schulen die Leute, die ihn betreiben, und ziehen uns zurück. Ihre Entwickler, mit einem schnelleren Prozess als vorher.",
+        "outcome": "Ein eingerichteter Workflow, Playbooks für technische und nicht-technische Mitarbeitende, ein geschultes Team."
+      },
+      {
+        "label": "Die Plattformarbeit",
+        "title": "AEM-Engineering",
+        "body": "Migrationen nach AEM as a Cloud Service und zu Edge Delivery, Neuentwicklungen, Upgrades bestehender Systeme, Adobe-Commerce-Storefronts und der Hotfix am Freitagnachmittag.",
+        "outcome": "Die Arbeit nach Ihren Konventionen, dokumentiert für alle, die nach uns kommen."
+      },
+      {
+        "label": "Nach der Übergabe",
+        "title": "Support",
+        "body": "Wartung, Optimierung und Fehlerbehebung an allem, was wir gebaut oder eingerichtet haben. Wenn in der Produktion etwas bricht oder schneller laufen könnte, kommen wir zurück und beheben es.",
+        "outcome": "Ein festes monatliches Stundenkontingent und eine Reaktion innerhalb von zwei Werktagen."
+      }
+    ],
+    "exclusions": "Was wir nicht machen: Adobe Target, Analytics und Kampagnen-Tools. Besser, Sie hören das jetzt von uns als im dritten Monat."
+  },
+  "stack": {
+    "eyebrow": "Unser Tech-Stack",
+    "heading": "Tief, wo es zählt.",
+    "headingLine2": "Sicher, wo es hilft.",
+    "intro": "Sieben erfahrene Engineers, ein gemeinsamer Kern. Jede Gruppe sagt, wie tief wir darin sind, denn genau das sollte ein Kunde zuerst prüfen.\nAgenten verkürzen die Zeit, sich in etwas Neues einzuarbeiten. Sie ersetzen nicht, es schon einmal ausgeliefert zu haben.",
+    "groups": [
+      {
+        "title": "Plattformen",
+        "depth": "Seit Jahren in Produktion",
+        "items": [
+          "Adobe Experience Manager",
+          "Edge Delivery Services",
+          "Adobe Commerce / Magento",
+          "Headless CMS",
+          "WordPress"
+        ]
+      },
+      {
+        "title": "Frontend",
+        "depth": "In Produktion",
+        "items": [
+          "TypeScript",
+          "React",
+          "Redux",
+          "Vue.js",
+          "Angular",
+          "Next.js",
+          "Astro"
+        ]
+      },
+      {
+        "title": "Backend und APIs",
+        "depth": "In Produktion",
+        "items": [
+          "Node.js",
+          "NestJS",
+          "Python · FastAPI",
+          "Rust",
+          "Typisierte APIs aus Datenmodellen generiert"
+        ]
+      },
+      {
+        "title": "KI und Agenten",
+        "depth": "Eigene Tools, täglich im Einsatz",
+        "items": [
+          "MCP-Server und -Clients",
+          "Multi-Agenten-Workflows",
+          "LangChain",
+          "LangGraph",
+          "Cloudflare Agents SDK",
+          "Vercel AI SDK"
+        ]
+      },
+      {
+        "title": "Automatisierung und Infrastruktur",
+        "depth": "Arbeitskenntnisse",
+        "items": [
+          "n8n",
+          "Docker",
+          "Terraform"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Unsere Preise",
+    "heading": "Klein anfangen.",
+    "headingLine2": "Zahlen für das, was messbar ist.",
+    "intro": "Festpreise für die ersten Schritte, damit Sie die Kosten kennen, bevor Sie uns kennen. Stundensätze, sobald sich die Arbeit bewährt hat. In Euro, für Kunden in der EU, zuzüglich Mehrwertsteuer.",
+    "plans": [
+      {
+        "name": "Discovery-Workshop",
+        "price": "2.250 €",
+        "unit": "Festpreis",
+        "body": "Ein Anwendungsfall, gemeinsam geprüft und in ein Pilot-Briefing übersetzt.",
+        "includes": [
+          "Pilot-Umfang und Abnahmekriterien",
+          "Voll angerechnet auf einen Pilot, der innerhalb von 30 Tagen startet"
+        ],
+        "highlight": false
+      },
+      {
+        "name": "Pilot",
+        "price": "7.350 €",
+        "unit": "Festpreis · 2–3 Wochen",
+        "body": "Ein Workflow auf einem Repository, einem Tracker und einer QA-Umgebung. Fünf bis zehn vereinbarte Aufgaben, bis zu 40 Delivery-Stunden.",
+        "includes": [
+          "Ausgangswert des heutigen Aufwands pro Aufgabe",
+          "Nachweise für jede Aufgabe",
+          "Auswertungsbericht und eine Schulung"
+        ],
+        "highlight": true
+      },
+      {
+        "name": "Delivery-Team",
+        "price": "ab 80 €",
+        "unit": "Pro Engineer, pro Stunde",
+        "body": "Erfahrene Engineers an Ihrem Arbeitsstrang, geführt von einem Architekten, monatlich abgerechnet nach vereinbartem Umfang.",
+        "includes": [
+          "3–5 % Nachlass bei zwölf Monaten Laufzeit",
+          "Wöchentliche oder zweiwöchentliche Berichte"
+        ],
+        "highlight": false
+      },
+      {
+        "name": "Support",
+        "price": "1.875 €",
+        "unit": "Pro Monat",
+        "body": "Bis zu zehn Stunden im Monat für Wartung, Optimierung und Fehlerbehebung an dem, was wir gebaut oder eingerichtet haben.",
+        "includes": [
+          "Reaktion innerhalb von zwei Werktagen",
+          "Monatlich im Voraus abgerechnet"
+        ],
+        "highlight": false
+      }
+    ],
+    "terms": "Lizenzen, KI-Nutzung und Cloud-Kosten sind nicht enthalten und werden zum Selbstkostenpreis berechnet. Arbeit außerhalb des vereinbarten Umfangs wird vorab schriftlich geschätzt und gedeckelt. Pilot: 50 % zum Start, 50 % bei Übergabe. Kunden außerhalb der EU erhalten ein separates Angebot."
+  },
+  "closing": {
+    "eyebrow": "Mit uns arbeiten",
+    "heading": "Fangen Sie mit einem Workflow an,",
+    "headingAccent": "und messen Sie uns am Ergebnis.",
+    "cta": {
+      "label": "Gespräch starten",
+      "href": "mailto:hello@agenticdraft.com"
+    }
+  }
+}
