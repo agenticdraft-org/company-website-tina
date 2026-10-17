@@ -1,0 +1,36 @@
+---
+import Base from '../layouts/Base.astro';
+import TinaIsland from '@tinacms/astro/TinaIsland.astro';
+import OfferBody from './islands/OfferBody.astro';
+import { DEFAULT_LOCALE } from '../lib/i18n';
+import { getConfig, getOffer } from '../lib/data';
+import { islands } from '../lib/islands';
+
+/**
+ * The offer page, rendered for a given locale. Mirrors `StoryPage.astro`; the
+ * only differences are the collection it reads and the `route` it hands the
+ * layout for the header anchors and the language switcher.
+ */
+interface Props {
+	locale?: string;
+}
+
+const { locale = DEFAULT_LOCALE } = Astro.props;
+
+const offer = await getOffer(locale);
+const data = offer.data?.offer;
+if (!data) return new Response('Not Found', { status: 404 });
+
+const config = (await getConfig(locale)).data?.config ?? null;
+---
+
+<Base
+	title={data.seoTitle || config?.seo?.title || 'AgenticDraft'}
+	description={data.seoDescription ?? config?.seo?.description ?? ''}
+	{locale}
+	route="offer"
+>
+	<TinaIsland name="offer" wrapper={islands.offer.wrapper} params={{ locale }} primary>
+		<OfferBody data={data} {locale} />
+	</TinaIsland>
+</Base>

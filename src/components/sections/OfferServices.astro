@@ -1,0 +1,72 @@
+---
+import { tinaField } from '@tinacms/astro/tina-field';
+import type { CmsOfferService, CmsOfferServices } from '../../lib/data';
+
+interface Props {
+	services?: CmsOfferServices | null;
+}
+
+const { services } = Astro.props;
+const items = (services?.items ?? []).filter((item): item is CmsOfferService => item !== null);
+
+// Numbered from the index, like the Approach principles, so reordering a
+// service in the CMS can never leave a stale number behind.
+const stepNumber = (index: number) => String(index + 1).padStart(2, '0');
+---
+
+{
+	services && (
+		<section class="offer-services section" id="services" aria-labelledby="services-title">
+			<div class="section-heading reveal">
+				<p class="eyebrow" data-tina-field={tinaField(services, 'eyebrow')}>
+					<span /> {services.eyebrow}
+				</p>
+				<h2 id="services-title">
+					<span data-tina-field={tinaField(services, 'heading')}>{services.heading}</span>
+					{services.headingLine2 && (
+						<>
+							<br />
+							<span data-tina-field={tinaField(services, 'headingLine2')}>
+								{services.headingLine2}
+							</span>
+						</>
+					)}
+				</h2>
+				<p class="preserve-lines" data-tina-field={tinaField(services, 'intro')}>{services.intro}</p>
+			</div>
+			<div class="services">
+				{items.map((item, index) => (
+					<article class="principle service reveal">
+						<span class="principle-number">
+							{stepNumber(index)}
+							{item.label && (
+								<>
+									{' · '}
+									<span data-tina-field={tinaField(item, 'label')}>{item.label}</span>
+								</>
+							)}
+						</span>
+						<div class="principle-line" aria-hidden="true" />
+						<h3 data-tina-field={tinaField(item, 'title')}>{item.title}</h3>
+						<p class="preserve-lines" data-tina-field={tinaField(item, 'body')}>{item.body}</p>
+						{item.outcome && (
+							<p class="service-outcome">
+								{services.outcomeLabel && (
+									<strong data-tina-field={tinaField(services, 'outcomeLabel')}>
+										{services.outcomeLabel}
+									</strong>
+								)}
+								<span data-tina-field={tinaField(item, 'outcome')}>{item.outcome}</span>
+							</p>
+						)}
+					</article>
+				))}
+			</div>
+			{services.exclusions && (
+				<p class="service-exclusions preserve-lines reveal" data-tina-field={tinaField(services, 'exclusions')}>
+					{services.exclusions}
+				</p>
+			)}
+		</section>
+	)
+}

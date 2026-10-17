@@ -34,6 +34,7 @@ export const localePath = (locale: string): string =>
 export const ROUTES = {
 	home: '',
 	story: 'story',
+	offer: 'offer',
 } as const;
 
 export type RouteKey = keyof typeof ROUTES;
@@ -96,6 +97,7 @@ export const UI_STRINGS: Record<
 		flowInputsAria: string;
 		platformCapabilitiesAria: string;
 		storySectionAria: string;
+		priceListAria: string;
 	}
 > = {
 	en: {
@@ -108,6 +110,7 @@ export const UI_STRINGS: Record<
 		flowInputsAria: 'Work items that enter the flow',
 		platformCapabilitiesAria: 'Platform capabilities',
 		storySectionAria: 'Our story',
+		priceListAria: 'Price list',
 	},
 	de: {
 		skipLink: 'Zum Inhalt springen',
@@ -119,6 +122,7 @@ export const UI_STRINGS: Record<
 		flowInputsAria: 'Vorgänge, die in den Ablauf eingehen',
 		platformCapabilitiesAria: 'Plattform-Funktionen',
 		storySectionAria: 'Unsere Geschichte',
+		priceListAria: 'Preisliste',
 	},
 };
 

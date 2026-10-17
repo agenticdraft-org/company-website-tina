@@ -1,0 +1,55 @@
+---
+import { tinaField } from '@tinacms/astro/tina-field';
+import type { CmsOfferStack, CmsOfferStackGroup } from '../../lib/data';
+
+interface Props {
+	stack?: CmsOfferStack | null;
+}
+
+const { stack } = Astro.props;
+const groups = (stack?.groups ?? []).filter((group): group is CmsOfferStackGroup => group !== null);
+---
+
+{
+	stack && (
+		<section class="workflow offer-stack section" id="stack" aria-labelledby="stack-title">
+			<div class="workflow-intro reveal">
+				<p class="eyebrow" data-tina-field={tinaField(stack, 'eyebrow')}>
+					<span /> {stack.eyebrow}
+				</p>
+				<h2 id="stack-title">
+					<span data-tina-field={tinaField(stack, 'heading')}>{stack.heading}</span>
+					{stack.headingLine2 && (
+						<>
+							<br />
+							<span data-tina-field={tinaField(stack, 'headingLine2')}>{stack.headingLine2}</span>
+						</>
+					)}
+				</h2>
+				<p class="preserve-lines" data-tina-field={tinaField(stack, 'intro')}>{stack.intro}</p>
+			</div>
+			<ul class="stack-list">
+				{groups.map((group) => {
+					const items = (group.items ?? []).filter((item): item is string => Boolean(item));
+					return (
+						<li class="stack-group reveal">
+							<div class="stack-head">
+								<h3 data-tina-field={tinaField(group, 'title')}>{group.title}</h3>
+								{group.depth && (
+									<span class="stack-depth" data-tina-field={tinaField(group, 'depth')}>
+										{group.depth}
+									</span>
+								)}
+							</div>
+							<ul class="stack-items">
+								{items.map((item, index) => (
+									<li data-tina-field={tinaField(group, 'items', index)}>{item}</li>
+								))}
+							</ul>
+						</li>
+					);
+				})}
+			</ul>
+		</section>
+	)
+}

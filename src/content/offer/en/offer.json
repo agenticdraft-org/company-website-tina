@@ -1,0 +1,171 @@
+{
+  "seoTitle": "Our offer — AgenticDraft",
+  "seoDescription": "What we deliver, what we build it with, and what it costs. Agentic delivery on Adobe Experience Manager and Edge Delivery Services, priced before the first call.",
+  "hero": {
+    "eyebrow": "Our offer",
+    "heading": "What we do, what we use, what it costs.",
+    "headingAccent": "On one page, before the first call.",
+    "lede": "Most offers keep the price for the third meeting. Ours is further down this page.\nTwo ways to work with us: we deliver the work, or we set the workflow up inside your team and leave. Both start small — one workflow, one repository, a result you can measure against what you do today."
+  },
+  "services": {
+    "eyebrow": "What we offer",
+    "heading": "One focus.",
+    "headingLine2": "Four ways to use it.",
+    "intro": "Agentic delivery on Adobe Experience Manager and Edge Delivery Services. That is where we have spent the last seven years, and where we can take responsibility for an outcome rather than supply hours.",
+    "outcomeLabel": "You receive",
+    "items": [
+      {
+        "label": "We build it",
+        "title": "Delivery",
+        "body": "Hand us a workstream — a set of components, a new Edge Delivery site, a backlog nobody has time for — and we run it through our workflow from ticket to review-ready pull request. Your engineers keep the review and the merge.",
+        "outcome": "Reviewed pull requests, the verification trail behind each one, and authoring guides."
+      },
+      {
+        "label": "We set it up and leave",
+        "title": "Enablement",
+        "body": "We install the agentic workflow inside your team — your repository, your tracker, your conventions — train the people who will run it, and step out. Your developers, with a faster process than they had before.",
+        "outcome": "A configured workflow, playbooks for technical and non-technical staff, a trained team."
+      },
+      {
+        "label": "The platform work",
+        "title": "AEM engineering",
+        "body": "Migrations to AEM as a Cloud Service and to Edge Delivery, new builds from scratch, upgrades of what is already running, Adobe Commerce storefronts, and the hot fix on a Friday afternoon.",
+        "outcome": "The work done to your conventions, documented for whoever comes after us."
+      },
+      {
+        "label": "After handover",
+        "title": "Support",
+        "body": "Maintenance, tuning and bug fixing on whatever we built or set up. When something breaks in production, or turns out it could run faster, we come back and fix it.",
+        "outcome": "A fixed monthly budget of hours, and a response within two business days."
+      }
+    ],
+    "exclusions": "What we don't do: Adobe Target, Analytics and campaign tooling. Better to hear that from us now than in month three."
+  },
+  "stack": {
+    "eyebrow": "Our tech stack",
+    "heading": "Deep where it counts.",
+    "headingLine2": "Fluent where it helps.",
+    "intro": "Seven senior engineers, one shared core. Each group says how deep we go in it, because that is the line a client should check first.\nAgents shorten the time it takes to pick up something new. They do not replace having shipped it.",
+    "groups": [
+      {
+        "title": "Platforms",
+        "depth": "Years in production",
+        "items": [
+          "Adobe Experience Manager",
+          "Edge Delivery Services",
+          "Adobe Commerce / Magento",
+          "Headless CMS",
+          "WordPress"
+        ]
+      },
+      {
+        "title": "Front end",
+        "depth": "Production",
+        "items": [
+          "TypeScript",
+          "React",
+          "Redux",
+          "Vue.js",
+          "Angular",
+          "Next.js",
+          "Astro"
+        ]
+      },
+      {
+        "title": "Back end and APIs",
+        "depth": "Production",
+        "items": [
+          "Node.js",
+          "NestJS",
+          "Python · FastAPI",
+          "Rust",
+          "Typed APIs generated from data models"
+        ]
+      },
+      {
+        "title": "AI and agents",
+        "depth": "Our own tooling, in daily use",
+        "items": [
+          "MCP servers and clients",
+          "Multi-agent workflows",
+          "LangChain",
+          "LangGraph",
+          "Cloudflare Agents SDK",
+          "Vercel AI SDK"
+        ]
+      },
+      {
+        "title": "Automation and infrastructure",
+        "depth": "Working knowledge",
+        "items": [
+          "n8n",
+          "Docker",
+          "Terraform"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Our prices",
+    "heading": "Start small.",
+    "headingLine2": "Pay for what you can measure.",
+    "intro": "Fixed fees for the first steps, so you know the cost before you know us. Hourly rates once the work has proven itself. In euro, for clients in the EU, excluding VAT.",
+    "plans": [
+      {
+        "name": "Discovery workshop",
+        "price": "€2,250",
+        "unit": "Fixed fee",
+        "body": "One use case, reviewed together and turned into a pilot brief.",
+        "includes": [
+          "Pilot scope and acceptance criteria",
+          "Credited in full against a pilot started within 30 days"
+        ],
+        "highlight": false
+      },
+      {
+        "name": "Pilot",
+        "price": "€7,350",
+        "unit": "Fixed fee · 2–3 weeks",
+        "body": "One workflow on one repository, one tracker and one QA environment. Five to ten agreed tasks, up to 40 delivery hours.",
+        "includes": [
+          "Baseline of today's effort per task",
+          "Verification evidence for every task",
+          "Evaluation report and one training session"
+        ],
+        "highlight": true
+      },
+      {
+        "name": "Delivery team",
+        "price": "from €80",
+        "unit": "Per engineer, per hour",
+        "body": "Senior engineers on your workstream, led by an architect, billed monthly against an agreed scope.",
+        "includes": [
+          "3–5% off for a twelve-month commitment",
+          "Weekly or fortnightly progress reports"
+        ],
+        "highlight": false
+      },
+      {
+        "name": "Support",
+        "price": "€1,875",
+        "unit": "Per month",
+        "body": "Up to ten hours a month for maintenance, tuning and fixes on what we built or set up.",
+        "includes": [
+          "Response within two business days",
+          "Billed monthly in advance"
+        ],
+        "highlight": false
+      }
+    ],
+    "terms": "Licences, AI usage and cloud costs are separate and billed at cost. Work outside an agreed scope is estimated in writing and capped before it starts. Pilot: 50% at kickoff, 50% at handover. Clients outside the EU are quoted separately."
+  },
+  "closing": {
+    "eyebrow": "Work with us",
+    "heading": "Start with one workflow,",
+    "headingAccent": "and judge us on the result.",
+    "cta": {
+      "label": "Start a conversation",
+      "href": "mailto:hello@agenticdraft.com"
+    }
+  }
+}

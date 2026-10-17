@@ -1,9 +1,10 @@
 ---
 import { tinaField } from '@tinacms/astro/tina-field';
-import type { CmsStoryHero } from '../../lib/data';
+import type { CmsOfferHero, CmsStoryHero } from '../../lib/data';
 
 interface Props {
-	hero?: CmsStoryHero | null;
+	/** The offer page opens the same way, from an identically shaped field. */
+	hero?: CmsStoryHero | CmsOfferHero | null;
 }
 
 const { hero } = Astro.props;

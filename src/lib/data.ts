@@ -27,9 +27,15 @@ export const getStory = (locale = 'en') =>
 		priority: 'primary',
 	});
 
+export const getOffer = (locale = 'en') =>
+	requestWithMetadata(client.queries.offer({ relativePath: `${locale}/offer.json` }), {
+		priority: 'primary',
+	});
+
 export type CmsConfig = Awaited<ReturnType<typeof getConfig>>['data']['config'];
 export type CmsPage = Awaited<ReturnType<typeof getHome>>['data']['page'];
 export type CmsStory = Awaited<ReturnType<typeof getStory>>['data']['story'];
+export type CmsOffer = Awaited<ReturnType<typeof getOffer>>['data']['offer'];
 
 export type CmsConfigNav = NonNullable<NonNullable<CmsConfig['nav']>[number]>;
 export type CmsConfigSeo = NonNullable<CmsConfig['seo']>;
@@ -52,3 +58,12 @@ export type CmsStorySignature = NonNullable<CmsStory['signature']>;
 // Structurally identical to `CmsClosing`, but generated from its own
 // collection, so `Closing.astro` accepts either rather than being duplicated.
 export type CmsStoryClosing = NonNullable<CmsStory['closing']>;
+
+export type CmsOfferHero = NonNullable<CmsOffer['hero']>;
+export type CmsOfferServices = NonNullable<CmsOffer['services']>;
+export type CmsOfferService = NonNullable<NonNullable<CmsOfferServices['items']>[number]>;
+export type CmsOfferStack = NonNullable<CmsOffer['stack']>;
+export type CmsOfferStackGroup = NonNullable<NonNullable<CmsOfferStack['groups']>[number]>;
+export type CmsOfferPricing = NonNullable<CmsOffer['pricing']>;
+export type CmsOfferPlan = NonNullable<NonNullable<CmsOfferPricing['plans']>[number]>;
+export type CmsOfferClosing = NonNullable<CmsOffer['closing']>;

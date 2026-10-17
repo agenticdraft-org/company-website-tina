@@ -11,13 +11,14 @@
 import type { IslandRegistry } from '@tinacms/astro/experimental';
 import type { QueryResult } from '@tinacms/astro/data';
 
-import type { ConfigQuery, PageQuery, StoryQuery } from '../../tina/__generated__/types';
-import type { CmsConfig, CmsPage, CmsStory } from './data';
+import type { ConfigQuery, OfferQuery, PageQuery, StoryQuery } from '../../tina/__generated__/types';
+import type { CmsConfig, CmsOffer, CmsPage, CmsStory } from './data';
 import PageBody from '../components/islands/PageBody.astro';
 import StoryBody from '../components/islands/StoryBody.astro';
+import OfferBody from '../components/islands/OfferBody.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { getConfig, getHome, getStory } from './data';
+import { getConfig, getHome, getOffer, getStory } from './data';
 import { isRouteKey, type RouteKey } from './i18n';
 
 /**
@@ -53,6 +54,15 @@ export const islands: IslandRegistry = {
 		wrapper: { tag: 'div' },
 		propsFromData: (data, params) => ({
 			data: (data as QueryResult<StoryQuery>).data?.story as CmsStory | undefined,
+			locale: localeOf(params),
+		}),
+	},
+	offer: {
+		fetch: (_request, params) => getOffer(localeOf(params)),
+		component: OfferBody,
+		wrapper: { tag: 'div' },
+		propsFromData: (data, params) => ({
+			data: (data as QueryResult<OfferQuery>).data?.offer as CmsOffer | undefined,
 			locale: localeOf(params),
 		}),
 	},
